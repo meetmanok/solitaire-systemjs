@@ -1,0 +1,10 @@
+pipeline {
+  node{
+      stage("Clone and build") {
+          steps {
+              git credentialsId: 'meetmanok-github-key', 
+              url: 'git@github.com:meetmanok/solitaire-systemjs.git'   
+          }
+      }
+  }
+}
