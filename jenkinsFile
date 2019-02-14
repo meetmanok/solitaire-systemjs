@@ -1,9 +1,11 @@
 pipeline {
   agent any
-  stage("Clone and build") {
+  stages{
+    stage("Clone and build") {
     steps {
       git credentialsId: 'meetmanok-github-key', 
       url: 'git@github.com:meetmanok/solitaire-systemjs.git'
       }
+    }
   }
 }
